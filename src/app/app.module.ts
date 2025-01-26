@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './common/homepage/homepage.component';
 import { AboutComponent } from './common/about/about.component';
 import { ContactComponent } from './common/contact/contact.component';
+import { AdminModule } from './admin/admin.module';
+import { CommonModule } from './common/common.module';
+import { GuestModule } from './guest/guest.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ContactComponent } from './common/contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AdminModule,
+    CommonModule,
+    GuestModule,
+    SharedModule
   ],
   providers: [
     provideClientHydration()
