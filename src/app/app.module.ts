@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { GuestModule } from './guest/guest.module';
 import { SharedModule } from './shared/shared.module';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AdminModule,
     GuestModule,
     SharedModule,
-    MatButtonModule,
-    MatToolbarModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     provideClientHydration()
