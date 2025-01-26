@@ -1,9 +1,7 @@
-
-
-
 /* header.component.css */
 mat-toolbar {
-  font-family: 'Poppins', sans-serif;
+  background-color: #3f51b5; /* Custom color */
+  color: white;
 }
 
 .logo {
@@ -17,4 +15,5 @@ mat-toolbar {
 
 button {
   margin: 0 10px;
+  color: white;
 }
