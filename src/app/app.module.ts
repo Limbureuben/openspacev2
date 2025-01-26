@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { GuestModule } from './guest/guest.module';
 import { SharedModule } from './shared/shared.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     AdminModule,
     GuestModule,
-    SharedModule
+    SharedModule,
+    MatButtonModule,
+    MatToolbarModule,
   ],
   providers: [
     provideClientHydration()
