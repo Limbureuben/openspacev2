@@ -5,6 +5,8 @@
   min-height: calc(100vh - 128px); /* Adjust height according to header and footer height */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 
