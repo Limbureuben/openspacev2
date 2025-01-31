@@ -1,4 +1,3 @@
-/* header.component.css */
 mat-toolbar {
   background-color: #3f51b5; /* Custom color */
   color: white;
@@ -15,5 +14,16 @@ mat-toolbar {
 
 button {
   margin: 0 10px;
-  color: white;
+  color: aqua;
+}
+
+.login-button {
+  font-weight: bold;
+  color: lightseagreen; /* Lightseagreen color */
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.login-button:hover {
+  background-color: #303f9f; /* Darker shade of primary color */
 }
