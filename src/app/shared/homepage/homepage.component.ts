@@ -22,9 +22,10 @@ export class HomepageComponent {
     const dialogRef = this.dialog.open(LoginComponent, {
       width: '300px',
       backdropClass: 'custom-backdrop'
-    }
-
-    )
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }
