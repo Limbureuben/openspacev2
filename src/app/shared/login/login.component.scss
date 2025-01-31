@@ -14,11 +14,12 @@
 
 .login-container {
   position: relative;
-  width: 300px;
-  padding: 20px;
+  width: 400px; /* Increased width for better spacing */
+  padding: 30px; /* Added padding for better spacing */
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a more modern look */
+  text-align: center; /* Centered text */
 }
 
 .close-btn {
@@ -31,8 +32,17 @@
   cursor: pointer;
 }
 
+.full-width {
+  width: 100%; /* Make form fields full width */
+  margin-bottom: 20px; /* Add margin for spacing between fields */
+}
+
 .actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
+}
+
+button {
+  margin: 10px; /* Add margin for spacing around buttons */
 }
