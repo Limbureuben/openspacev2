@@ -8,3 +8,22 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: lightseagreen !important;
+}
+
+.mat-input-element {
+  font-size: 16px !important;
+  padding: 12px !important;
+  color: #333 !important;
+}
+
+.mat-form-field-label {
+  color: lightseagreen !important;
+}
