@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

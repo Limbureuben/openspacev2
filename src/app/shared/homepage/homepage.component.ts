@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-homepage',
@@ -14,5 +16,15 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 
 export class HomepageComponent {
+  constructor(private dialog: MatDialog) {}
+
+  openLoginDialog(): void {
+    const dialogRef = this.dialog.open(LoginComponent, {
+      width: '300px',
+      backdropClass: 'custom-backdrop'
+    }
+
+    )
+  }
 
 }
