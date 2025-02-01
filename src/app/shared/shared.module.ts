@@ -16,7 +16,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { RegisterComponent } from './register/register.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
+    RegisterComponent,
+    AdminSidebarComponent,
+    AdminHeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +43,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
+
+  exports: [
+    AdminHeaderComponent,
+    AdminSidebarComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,14 @@
+<!-- src/app/admin/admin-sidebar/admin-sidebar.component.html -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-toolbar>Admin Dashboard</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/admin">Dashboard</a>
+      <a mat-list-item routerLink="/admin/users">Users</a>
+      <a mat-list-item routerLink="/admin/settings">Settings</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

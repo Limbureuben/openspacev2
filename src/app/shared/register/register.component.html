@@ -1,0 +1,29 @@
+<!-- register.component.html -->
+<div class="register-overlay" (click)="close()">
+  <div class="register-container" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close()">×</button>
+    <img src="assets/images/emblem.png" alt="Logo" class="register-logo">
+
+    <form>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your username" type="text" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter your password" type="password" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput placeholder="Confirm your password" type="password" required>
+      </mat-form-field>
+      <div class="actions">
+        <button mat-raised-button color="primary" class="register-btn">Register</button>
+      </div>
+      <div class="login-link">
+        <span>Already have an account?</span>
+        <a (click)="navigateToLogin()">Login</a>
+      </div>
+    </form>
+  </div>
+</div>

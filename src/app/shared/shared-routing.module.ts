@@ -6,6 +6,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   { path: 'homepage', component: HomepageComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'header', component: HeaderComponent},
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
+  { path: 'admin-header', component: AdminHeaderComponent},
+  { path: 'admin-sidebar', component: AdminSidebarComponent}
 ];
 
 @NgModule({

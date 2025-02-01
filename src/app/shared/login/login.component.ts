@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,17 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(public dialogRef: MatDialogRef<LoginComponent>, private router: Router) {}
+  constructor(public dialogRef: MatDialogRef<LoginComponent>, private dialog: MatDialog, private router: Router) {}
 
   close(): void {
     this.dialogRef.close();
   }
 
   navigateToRegister(): void {
-    this.router.navigate(['/'])
+    this.close();
+    this.dialog.open(RegisterComponent, {
+      width: '400px',
+      backdropClass: 'custom-backdrop'
+    });
   }
 }
