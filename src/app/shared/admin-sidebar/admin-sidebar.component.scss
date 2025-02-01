@@ -1,10 +1,34 @@
 /* src/app/admin/admin-sidebar/admin-sidebar.component.css */
+
+.sidenav-container {
+  height: 100vh; /* Set the container height to 100% of the viewport height */
+}
+
 .sidenav {
   width: 250px;
-  height: 500px; /* Set the height to 100% of the viewport height */
+  height: 100%; /* Ensure the sidebar takes the full height of the container */
+  background-color: #3f51b5; /* Example background color */
+  color: white; /* Example text color */
 }
 
 .mat-toolbar {
   background: #3f51b5;
   color: white;
+}
+
+.mat-nav-list {
+  padding-top: 20px;
+}
+
+.mat-nav-list a {
+  color: white; /* Ensures the text color in the links is white */
+  text-decoration: none;
+}
+
+.mat-nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mat-list-item {
+  padding: 15px;
 }

@@ -1,9 +1,7 @@
-.sidenav-container {
-  height: 100%;
-}
+/* src/app/admin/admin-dashboard/admin-dashboard.component.css */
 
-.sidenav {
-  width: 250px;
+.sidenav-container {
+  height: 100vh; /* Set the container height to 100% of the viewport height */
 }
 
 .content {
