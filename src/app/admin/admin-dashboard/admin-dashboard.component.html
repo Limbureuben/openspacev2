@@ -1,6 +1,12 @@
-<!-- src/app/components/dashboard/dashboard.component.html -->
-  <app-admin-header></app-admin-header>
-  <div class="content">
-    <h1>Welcome to the Admin Dashboard</h1>
-    <!-- Add your dashboard content here -->
-  </div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <app-admin-sidebar></app-admin-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-admin-header></app-admin-header>
+    <div class="content">
+      <h1>Welcome to the Admin Dashboard</h1>
+      <!-- Add your dashboard content here -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

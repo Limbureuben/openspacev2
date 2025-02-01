@@ -1,12 +1,7 @@
-
-
 /* src/app/admin/admin-sidebar/admin-sidebar.component.css */
-.sidenav-container {
-  height: 100%;
-}
-
 .sidenav {
   width: 250px;
+  height: 500px; /* Set the height to 100% of the viewport height */
 }
 
 .mat-toolbar {
