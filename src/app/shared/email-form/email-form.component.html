@@ -1,1 +1,32 @@
-<p>email-form works!</p>
+<div class="email-overlay" (click)="close()">
+  <div class="email-container" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close()">×</button>
+    <img src="assets/images/emblem.png" alt="Logo" class="email-logo">
+
+    <form>
+
+      <!-- User's Email Input -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>From</mat-label>
+        <input matInput placeholder="Enter your email" type="email" required>
+      </mat-form-field>
+
+      <!-- Admin Email Display (Read-Only) -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>To</mat-label>
+        <input matInput value="limbureubenn@gmail.com" readonly>
+      </mat-form-field>
+
+      <!-- User's Message Input -->
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Enter your message" required></textarea>
+      </mat-form-field>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button mat-raised-button color="primary" class="send-btn" (click)="onSubmit()">Send</button>
+      </div>
+    </form>
+  </div>
+</div>

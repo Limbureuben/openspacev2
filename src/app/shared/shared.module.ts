@@ -22,6 +22,7 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { EmailFormComponent } from './email-form/email-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EmailFormComponent } from './email-form/email-form.component';
     MatFormFieldModule,
     MatSidenavModule,
     MatListModule,
+    FormsModule,
   ],
 
   exports: [
