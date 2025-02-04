@@ -21,6 +21,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { EmailFormComponent } from './email-form/email-form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     RegisterComponent,
     AdminSidebarComponent,
     AdminHeaderComponent,
+    EmailFormComponent,
   ],
   imports: [
     CommonModule,
