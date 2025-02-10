@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'admin-header', component: AdminHeaderComponent},
   { path: 'admin-sidebar', component: AdminSidebarComponent},
-
+  { path: 'email-form', component: EmailFormComponent}
 ];
 
 @NgModule({
