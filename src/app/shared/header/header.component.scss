@@ -1,0 +1,29 @@
+mat-toolbar {
+  background-color: #3f51b5; /* Custom color */
+  color: white;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  margin: 0 10px;
+  color: aqua;
+}
+
+.login-button {
+  font-weight: bold;
+  color: lightseagreen; /* Lightseagreen color */
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.login-button:hover {
+  background-color: #303f9f; /* Darker shade of primary color */
+}

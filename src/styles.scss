@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* styles.css or styles.scss */
+
+// styles.scss
+// styles.scss
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: lightseagreen !important;
+}
+
+.mat-input-element {
+  font-size: 16px !important;
+  padding: 12px !important;
+  color: #333 !important;
+}
+
+.mat-form-field-label {
+  color: lightseagreen !important;
+}

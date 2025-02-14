@@ -1,0 +1,46 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar -->
+  <mat-sidenav mode="side" opened class="sidenav">
+    <app-admin-sidebar></app-admin-sidebar>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <app-admin-header></app-admin-header>
+
+    <div class="dashboard-content">
+      <h1>Web-GIS Dashboard for Open Space Management</h1>
+
+      <!-- Statistics Section -->
+      <div class="stats-section">
+        <h2>Statistics</h2>
+        <div class="stats-container">
+          <mat-card class="stat-card">
+            <mat-card-header>
+              <mat-card-title>Total Reports</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h3>120</h3>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="stat-card">
+            <mat-card-header>
+              <mat-card-title>Total Users</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h3>50</h3>
+            </mat-card-content>
+          </mat-card>
+          <mat-card class="stat-card">
+            <mat-card-header>
+              <mat-card-title>Resolved Issues</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <h3>80%</h3>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

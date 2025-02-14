@@ -1,0 +1,26 @@
+<div class="login-overlay" (click)="close()">
+  <div class="login-container" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close()">×</button>
+    <img src="assets/images/emblem.png" alt="Logo" class="login-logo">
+
+    <form>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Enter your username" type="text" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter your password" type="password" required>
+      </mat-form-field>
+      <div class="actions">
+        <button mat-raised-button color="primary" class="login-btn">Login</button>
+      </div>
+
+      <!-- New Register Link -->
+      <div class="register-link">
+        <span>Do not have an account?</span>
+        <a (click)="navigateToRegister()">Register</a>
+      </div>
+    </form>
+  </div>
+</div>
