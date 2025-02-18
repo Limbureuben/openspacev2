@@ -4,21 +4,31 @@
     <button class="close-btn" (click)="close()">×</button>
     <img src="assets/images/emblem.png" alt="Logo" class="register-logo">
 
-    <form>
+    <form [FormGroup]="formData" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="full-width custom-input">
         <mat-label>Username</mat-label>
-        <input matInput placeholder="Enter your username" type="text" required>
+        <input matInput type="text" name="username" formControlName="username" placeholder="Enter your username" type="text" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width custom-input">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" formControlName="email" placeholder="Enter your email" type="text" required>
       </mat-form-field>
       <mat-form-field appearance="outline" class="full-width custom-input">
         <mat-label>Password</mat-label>
-        <input matInput placeholder="Enter your password" type="password" required>
+        <input matInput type="password" name="password" formControlName= "password" placeholder="Enter your password" type="password" required>
       </mat-form-field>
       <mat-form-field appearance="outline" class="full-width custom-input">
         <mat-label>Confirm Password</mat-label>
-        <input matInput placeholder="Confirm your password" type="password" required>
+        <input matInput type="password" name="passwordConfirm" formControlName="passwordConfirm" placeholder="Confirm your password" type="password" required>
       </mat-form-field>
+      <div *ngIf="formData.hasError('passwordMismatch') && formData.get('passwordConfirm')?.touched" class="text-red-600 text-sm mt-1">
+        Passwords do not match
+      </div>
+      <div *ngIf="formData.get('passwordConfirm')?.invalid && formData.get('passwordConfirm')?.touched" class="text-red-600 text-sm mt-1">
+        Password confirmation is required
+      </div>
       <div class="actions">
-        <button mat-raised-button color="primary" class="register-btn">Register</button>
+        <button type="submit" mat-raised-button color="primary" class="register-btn">Register</button>
       </div>
       <div class="login-link">
         <span>Already have an account?</span>

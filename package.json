@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.2.0",
+    "@angular/animations": "^18.2.13",
     "@angular/cdk": "^17.0.0",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
@@ -23,8 +23,12 @@
     "@angular/platform-server": "^18.2.0",
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.6",
+    "@apollo/client": "^3.13.1",
+    "apollo-angular": "^10.0.1",
     "chart.js": "^4.4.7",
     "express": "^4.18.2",
+    "graphql": "^16.10.0",
+    "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.8.1",
     "zone.js": "~0.14.10"

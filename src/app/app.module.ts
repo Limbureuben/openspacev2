@@ -7,12 +7,16 @@ import { AdminModule } from './admin/admin.module';
 import { GuestModule } from './guest/guest.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { apolloProvider } from './apollo.config';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     AdminModule,
     GuestModule,
@@ -20,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    apolloProvider
   ],
   bootstrap: [AppComponent],
 })
