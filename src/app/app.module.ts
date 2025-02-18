@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { apolloProvider } from './apollo.config';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     GuestModule,
     SharedModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     provideClientHydration(),

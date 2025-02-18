@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Apollo } from 'apollo-angular';
+import { Apollo, gql } from 'apollo-angular';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import gql from 'graphql-tag';
+// import { REGISTER_USER } from '../../../store/graphql';
+import { REGISTER_MUTATION } from '../../../store/graphql';
 
 
 export interface RegisterData {
@@ -14,18 +15,6 @@ export interface RegisterData {
   passwordConfirm: string;
 }
 
-const REGISTER_MUTATION = gql`
-  mutation Register($input: RegisterInput!) {
-    register(input: $input) {
-      user {
-        id
-        username
-        email
-      }
-      token
-    }
-  }
-`;
 
 @Injectable({
   providedIn: 'root'

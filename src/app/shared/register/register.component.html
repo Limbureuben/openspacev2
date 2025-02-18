@@ -4,7 +4,7 @@
     <button class="close-btn" (click)="close()">×</button>
     <img src="assets/images/emblem.png" alt="Logo" class="register-logo">
 
-    <form [FormGroup]="formData" (ngSubmit)="onSubmit()">
+      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="full-width custom-input">
         <mat-label>Username</mat-label>
         <input matInput type="text" name="username" formControlName="username" placeholder="Enter your username" type="text" required>
