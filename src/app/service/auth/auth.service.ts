@@ -4,7 +4,8 @@ import { Apollo } from 'apollo-angular';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { REGISTER_MUTATION } from '../../../store/graphql'
+import gql from 'graphql-tag';
+
 
 export interface RegisterData {
   username: string;
@@ -12,6 +13,19 @@ export interface RegisterData {
   password: string;
   passwordConfirm: string;
 }
+
+const REGISTER_MUTATION = gql`
+  mutation Register($input: RegisterInput!) {
+    register(input: $input) {
+      user {
+        id
+        username
+        email
+      }
+      token
+    }
+  }
+`;
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +44,7 @@ export class AuthService {
       variables: {
         input: userData
       }
-    })
+    });
 
   } 
 }
