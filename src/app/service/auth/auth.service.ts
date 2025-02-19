@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Apollo, gql } from 'apollo-angular';
+import { Apollo } from 'apollo-angular';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -23,7 +23,6 @@ export class AuthService {
 
   constructor(
     private apollo: Apollo,
-    private router: Router,
   ) { }
 
   

@@ -24,6 +24,9 @@ button {
   border-radius: 4px;
 }
 
-.login-button:hover {
-  background-color: #303f9f; /* Darker shade of primary color */
+
+
+.custom-login-button {
+  background-color: #ff5733; /* Replace with your desired color */
+  color: white; /* Adjust text color if needed */
 }

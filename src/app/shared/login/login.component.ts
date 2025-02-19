@@ -15,11 +15,11 @@ export class LoginComponent {
     this.dialogRef.close();
   }
 
-  navigateToRegister(): void {
-    this.close();
-    this.dialog.open(RegisterComponent, {
-      width: '400px',
-      backdropClass: 'custom-backdrop'
-    });
-  }
+  // navigateToRegister(): void {
+  //   this.close();
+  //   this.dialog.open(RegisterComponent, {
+  //     width: '400px',
+  //     backdropClass: 'custom-backdrop'
+  //   });
+  // }
 }

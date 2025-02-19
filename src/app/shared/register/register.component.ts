@@ -13,17 +13,15 @@ import { AuthService } from '../../service/auth/auth.service';
 })
 export class RegisterComponent {
   formData: FormGroup;
-  private authService: AuthService;
 
   constructor(
-    public dialogRef: MatDialogRef<RegisterComponent>, 
+    public dialogRef: MatDialogRef<RegisterComponent>,
     private dialog: MatDialog,
     private fb: FormBuilder,
-    private injector: Injector, // Lazy Injector
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private authService: AuthService
   ) {
-    this.authService = this.injector.get(AuthService); // Lazy Injection
 
     this.formData = this.fb.group({
       username: ['', Validators.required],
@@ -41,15 +39,15 @@ export class RegisterComponent {
     this.dialogRef.close();
   }
 
-  navigateToLogin(): void {
-    this.dialogRef.close();
-    setTimeout(() => {
-      this.dialog.open(LoginComponent, {
-        width: '400px',
-        backdropClass: 'custom-backdrop'
-      });
-    }, 100); // Delayed opening to avoid UI issues
-  }
+  // navigateToLogin(): void {
+  //   this.dialogRef.close();
+  //   setTimeout(() => {
+  //     this.dialog.open(LoginComponent, {
+  //       width: '400px',
+  //       backdropClass: 'custom-backdrop'
+  //     });
+  //   }, 100); // Delayed opening to avoid UI issues
+  // }
 
   passwordMatchValidator() {
     return (control: AbstractControl): ValidationErrors | null => {

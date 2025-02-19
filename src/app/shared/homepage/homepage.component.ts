@@ -18,14 +18,14 @@ import { LoginComponent } from '../login/login.component';
 export class HomepageComponent {
   constructor(private dialog: MatDialog) {}
 
-  openLoginDialog(): void {
-    const dialogRef = this.dialog.open(LoginComponent, {
-      width: '300px',
-      backdropClass: 'custom-backdrop'
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+  // openLoginDialog(): void {
+  //   const dialogRef = this.dialog.open(LoginComponent, {
+  //     width: '300px',
+  //     backdropClass: 'custom-backdrop'
+  //   });
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+  //   });
+  // }
 
 }
