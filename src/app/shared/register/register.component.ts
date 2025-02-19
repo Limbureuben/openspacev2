@@ -1,6 +1,5 @@
 import { Component, Injector } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { LoginComponent } from '../login/login.component';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';

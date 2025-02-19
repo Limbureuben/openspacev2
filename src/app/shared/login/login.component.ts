@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
