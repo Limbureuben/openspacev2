@@ -53,6 +53,8 @@ import { ToastrModule } from 'ngx-toastr';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule,
+    AdminHeaderComponent,
+    
   ],
 
   exports: [

@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-email-form',
+  standalone: false,
   templateUrl: './email-form.component.html',
   styleUrl: './email-form.component.scss'
 })

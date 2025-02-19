@@ -6,6 +6,7 @@ import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-header',
+  standalone: false,
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   animations: [

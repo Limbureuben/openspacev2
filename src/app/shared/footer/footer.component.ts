@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-footer',
+  standalone: false,
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   animations: [

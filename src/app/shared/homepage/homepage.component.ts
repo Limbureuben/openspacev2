@@ -5,6 +5,7 @@ import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-homepage',
+  standalone: false,
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
   animations: [
