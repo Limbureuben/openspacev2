@@ -12,90 +12,90 @@ import { AuthService } from '../../service/auth/auth.service';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-  formData: FormGroup;
+  // formData: FormGroup;
 
-  constructor(
-    public dialogRef: MatDialogRef<RegisterComponent>,
-    private dialog: MatDialog,
-    private fb: FormBuilder,
-    private router: Router,
-    private toastr: ToastrService,
-    private authService: AuthService
-  ) {
+  // constructor(
+  //   public dialogRef: MatDialogRef<RegisterComponent>,
+  //   private dialog: MatDialog,
+  //   private fb: FormBuilder,
+  //   private router: Router,
+  //   private toastr: ToastrService,
+  //   private authService: AuthService
+  // ) {
 
-    this.formData = this.fb.group({
-      username: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [
-        Validators.required,
-        Validators.minLength(8),
-        this.passwordComplexityValidator(),
-      ]],
-      passwordConfirm: ['', Validators.required],
-    }, { validators: this.passwordMatchValidator() });
-  }
-
-  close(): void {
-    this.dialogRef.close();
-  }
-
-  // navigateToLogin(): void {
-  //   this.dialogRef.close();
-  //   setTimeout(() => {
-  //     this.dialog.open(LoginComponent, {
-  //       width: '400px',
-  //       backdropClass: 'custom-backdrop'
-  //     });
-  //   }, 100); // Delayed opening to avoid UI issues
+  //   this.formData = this.fb.group({
+  //     username: ['', Validators.required],
+  //     email: ['', [Validators.required, Validators.email]],
+  //     password: ['', [
+  //       Validators.required,
+  //       Validators.minLength(8),
+  //       this.passwordComplexityValidator(),
+  //     ]],
+  //     passwordConfirm: ['', Validators.required],
+  //   }, { validators: this.passwordMatchValidator() });
   // }
 
-  passwordMatchValidator() {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const password = control.get('password')?.value;
-      const confirmPassword = control.get('passwordConfirm')?.value;
-      return password && confirmPassword && password !== confirmPassword
-        ? { passwordMismatch: true }
-        : null;
-    };
-  }
+  // close(): void {
+  //   this.dialogRef.close();
+  // }
 
-  passwordComplexityValidator() {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const password = control.value || '';
-      const complexityRegex =
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-      return complexityRegex.test(password)
-        ? null
-        : { passwordComplexity: true };
-    };
-  }
+  // // navigateToLogin(): void {
+  // //   this.dialogRef.close();
+  // //   setTimeout(() => {
+  // //     this.dialog.open(LoginComponent, {
+  // //       width: '400px',
+  // //       backdropClass: 'custom-backdrop'
+  // //     });
+  // //   }, 100); // Delayed opening to avoid UI issues
+  // // }
 
-  onSubmit() {
-    if (!this.formData.valid) {
-      this.formData.markAllAsTouched();
-      return;
-    }
+  // passwordMatchValidator() {
+  //   return (control: AbstractControl): ValidationErrors | null => {
+  //     const password = control.get('password')?.value;
+  //     const confirmPassword = control.get('passwordConfirm')?.value;
+  //     return password && confirmPassword && password !== confirmPassword
+  //       ? { passwordMismatch: true }
+  //       : null;
+  //   };
+  // }
 
-    const registrationData = this.formData.value;
+  // passwordComplexityValidator() {
+  //   return (control: AbstractControl): ValidationErrors | null => {
+  //     const password = control.value || '';
+  //     const complexityRegex =
+  //       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  //     return complexityRegex.test(password)
+  //       ? null
+  //       : { passwordComplexity: true };
+  //   };
+  // }
 
-    this.authService.registerUser(registrationData).subscribe({
-      next: (result) => {
-        const response = result.data.registerUser;
-        if (response.success) {
-          this.toastr.success(response.message, 'Success');
-          this.router.navigate(['/login']);
-        } else {
-          this.toastr.error(response.message, 'Registration failed');
-        }
-      },
-      error: () => {
-        this.toastr.error('An error occurred. Please try again later.', 'Error');
-      }
-    });
-  }
+  // onSubmit() {
+  //   if (!this.formData.valid) {
+  //     this.formData.markAllAsTouched();
+  //     return;
+  //   }
 
-  hasError(field: string, errorType: string): boolean {
-    const control = this.formData.get(field);
-    return control?.hasError(errorType) && control?.touched ? true : false;
-  }
+  //   const registrationData = this.formData.value;
+
+  //   this.authService.registerUser(registrationData).subscribe({
+  //     next: (result) => {
+  //       const response = result.data.registerUser;
+  //       if (response.success) {
+  //         this.toastr.success(response.message, 'Success');
+  //         this.router.navigate(['/login']);
+  //       } else {
+  //         this.toastr.error(response.message, 'Registration failed');
+  //       }
+  //     },
+  //     error: () => {
+  //       this.toastr.error('An error occurred. Please try again later.', 'Error');
+  //     }
+  //   });
+  // }
+
+  // hasError(field: string, errorType: string): boolean {
+  //   const control = this.formData.get(field);
+  //   return control?.hasError(errorType) && control?.touched ? true : false;
+  // }
 }
